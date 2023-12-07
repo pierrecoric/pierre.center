@@ -1,14 +1,30 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { Card } from './components/Card.jsx';
+import listOfProjects from './listOfProjects.jsx';
 
 function App() {
 
   return (
     <>
-     <h1 className="text-3xl font-bold">Pierre.center</h1>
+    <div className='flex flex-wrap'>
+    {listOfProjects.map((project, key) => {
+      return <Card 
+        title={project.title} 
+        description={project.description} 
+        image={project.image}
+        link={project.link}
+        github={project.github}
+      />
+      })
+    }
+    </div>
     </>
   )
 }
 
 export default App
+
+
+
 
