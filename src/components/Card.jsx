@@ -35,10 +35,14 @@ export const Card = (props) => {
   const cardsReset = () => {
     //get all the other cards
     const allCards = document.querySelectorAll('.card');
+    const allContentCards = document.querySelectorAll('.contentCard');
     // Loop through all cards and reset them
     allCards.forEach(card => {
       card.classList.remove('col-span-2', 'hidden');
       card.classList.add('col-span-1');
+    });
+    allContentCards.forEach(card => {
+      card.classList.add('hidden');
     });
   }
 
@@ -48,9 +52,11 @@ export const Card = (props) => {
 
     //get the clicked card
     const clickedDiv = document.getElementById(`cardDiv${id}`);
-    //creat the div to hide
-    let divToHide = (null)    
+    //get the content of the sub div
+    const contentDiv = document.getElementById(`content${id}`);
 
+    //create the div to hide
+    let divToHide = (null)    
     //initiate how many cols we have here
     let cols = 4;
     let extraCol = 2;
@@ -81,6 +87,7 @@ export const Card = (props) => {
         }
         clickedDiv.classList.remove('col-span-1');
         clickedDiv.classList.add('col-span-2', 'open');
+        contentDiv.classList.remove('hidden');
       }
     }
     //if the window is smaller than medium
@@ -90,17 +97,20 @@ export const Card = (props) => {
       }
       else {
         clickedDiv.classList.add('open');
+        contentDiv.classList.remove('hidden');
       }
     }
   }
 
   return (
     <div id={`cardDiv${props.id}`} className="card col-span-1 flex items-center justify-center hover:cursor-pointer transition-all" style={{ height: `${height}px` }} ref={cardDivRef} onClick={() => clickCard(props.id, props.image)}>
-      <div id={`picture${props.id}`}className="rounded-xl bg-cover bg-center w-[100%] h-[100%] transition-all" style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
-        <a href={`${props.link}`}>{props.link}</a>
-        <p>{props.github}</p>
+      <div id={`picture${props.id}`} className="w-full h-full rounded-xl bg-cover bg-center transition-all" style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
+        <div id={`content${props.id}`} className='contentCard w-full h-full rounded-xl bg-slate-50 opacity-90 hidden'>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+          <a href={`${props.link}`}>{props.link}</a>
+          <p>{props.github}</p>
+        </div>
       </div>
     </div>
   );
