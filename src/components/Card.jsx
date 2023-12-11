@@ -18,7 +18,7 @@ export const Card = (props) => {
       //here add conditions according to the size of the window
       let divHeight = (1) * divWidth;
       if (window.innerWidth > breakpoints.md) {
-        divHeight = (3 / 2) * divWidth;
+        divHeight = (3 / 2.1) * divWidth;
       }
       setWidth(divWidth);
       setHeight(divHeight);
@@ -108,7 +108,7 @@ export const Card = (props) => {
       <div id={`picture${props.id}`} className="w-full h-full rounded-xl bg-cover bg-center transition-all duration-1000" style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
         <div id={`content${props.id}`} className='contentCard w-full h-full rounded-xl backdrop-blur-md bg-white/70 p-10 flex flex-col justify-between overflow-scroll transition-all duration-1000'>
           <div>
-            <h1 className='text-xl font-bold mb-5'>{props.title}</h1>
+            <h1 className='text-xl font-bold mb-5 tracking-tight'>{props.title}</h1>
             <p className='mb-2'>{props.description}</p>
           </div>
           <div className='mt-5'>
