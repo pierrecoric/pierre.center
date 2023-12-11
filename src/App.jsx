@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+    <div>Little presentation</div>
     <div className='bg-red-200 flex items-center justify-center'>
       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-9 w-[90%]'>
         {listOfProjects.map((project, key) => {

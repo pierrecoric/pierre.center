@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import breakpoints from '../breakpoints';
+import './card.css';
 
 export const Card = (props) => {
   //to hold the dimensions of the cards
@@ -103,13 +104,17 @@ export const Card = (props) => {
   }
 
   return (
-    <div id={`cardDiv${props.id}`} className="card col-span-1 flex items-center justify-center hover:cursor-pointer transition-all" style={{ height: `${height}px` }} ref={cardDivRef} onClick={() => clickCard(props.id, props.image)}>
-      <div id={`picture${props.id}`} className="w-full h-full rounded-xl bg-cover bg-center transition-all" style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
-        <div id={`content${props.id}`} className='contentCard w-full h-full rounded-xl bg-slate-50 opacity-90 hidden'>
-          <h1>{props.title}</h1>
-          <p>{props.description}</p>
-          <a href={`${props.link}`}>{props.link}</a>
-          <p>{props.github}</p>
+    <div id={`cardDiv${props.id}`} className="card col-span-1 flex items-center justify-center hover:cursor-pointer transition-all duration-1000" style={{ height: `${height}px` }} ref={cardDivRef} onClick={() => clickCard(props.id, props.image)}>
+      <div id={`picture${props.id}`} className="w-full h-full rounded-xl bg-cover bg-center transition-all duration-1000" style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
+        <div id={`content${props.id}`} className='contentCard w-full h-full rounded-xl backdrop-blur-md bg-white/70 p-10 flex flex-col justify-between overflow-scroll transition-all duration-1000'>
+          <div>
+            <h1 className='text-xl font-bold mb-5'>{props.title}</h1>
+            <p className='mb-2'>{props.description}</p>
+          </div>
+          <div className='mt-5'>
+            <a className='underline text-orange-500 hover:text-black' href={`${props.link}`} target="_blank">{props.link}</a>
+            <a className='block mt-5 h-8 w-8 bg-cover ghLogo' href={`${props.github}`} target="_blank"></a>
+          </div>
         </div>
       </div>
     </div>
