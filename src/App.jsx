@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import React, {Ref, useEffect, useCallback} from 'react';
 import './App.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { Card } from './components/Card.jsx';
@@ -7,10 +8,35 @@ import listOfProjects from './listOfProjects.jsx';
 import './intro.css';
 
 function App() {
+  const footerRef = useRef();
+  const parallax = useRef();
+  const handleScroll = () => {
+    if (parallax.current) {
+      const theFooter = footerRef.current;
+
+      console.log(parallax.current.current)
+      if(parallax.current.current > 300) {
+        theFooter.classList.remove('md:top-0');
+        theFooter.classList.add('md:bottom-0');
+      }
+      else {
+        theFooter.classList.add('md:top-0');
+        theFooter.classList.remove('md:bottom-0');
+      }
+    }
+  }
+  
+  useEffect(() => {
+    const container = document.querySelector('.my-class-name')
+    container.addEventListener('scroll', handleScroll)
+    return () => {
+      container.removeEventListener('scroll', handleScroll)
+    }
+  }, [footerRef])
 
   return (
     <>
-    <Parallax pages={3}>
+    <Parallax pages={3} ref={parallax} className='my-class-name'>
       <ParallaxLayer 
         speed={0.3}
         factor={4}
@@ -27,8 +53,8 @@ function App() {
               </div>
             </div>
             <div className='w-full md:w-1/2 flex items-center justify-center'>
-              <div className='text-white text-center md:text-left'>
-                <h1 className='font-bold mb-5 tracking-tight'>COUCOU TOUT LE MONDE</h1>
+              <div className='font-avni text-white text-center md:text-left'>
+                <h1 className='font-helv font-bold mb-5 tracking-tight'>COUCOU TOUT LE MONDE</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem, perferendis optio amet, natus id quaerat aperiam unde delectus facere voluptate possimus quod nostrum obcaecati facilis molestiae est incidunt tempora.
                 s</p>
@@ -55,7 +81,7 @@ function App() {
         </div>
       </ParallaxLayer>
     </Parallax>
-    <Footer />
+    <Footer footerRef={footerRef} />
     </>
   )
 }
