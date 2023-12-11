@@ -1,0 +1,7 @@
+.ghLogo {
+    background-image: url("/images/gh_logo_black.svg")
+}
+
+.ghLogo:hover {
+    background-image: url("/images/gh_logo_hover.svg")
+}
