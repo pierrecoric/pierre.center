@@ -18,7 +18,7 @@ function App() {
       const theFooter = footerRef.current;
 
       console.log(parallax.current.current)
-      if(parallax.current.current > 200) {
+      if(parallax.current.current > 210) {
         theFooter.classList.remove('md:top-0');
         theFooter.classList.add('md:bottom-0');
       }
@@ -54,16 +54,16 @@ function App() {
           backgroundSize: 'cover'
         }}
       />
-      <ParallaxLayer factor={0.5} speed={1.7}>
+      <ParallaxLayer factor={0.5} speed={1.6}>
         <div className='mt-12 md:mt-24 h-full flex items-center justify-center'>
           <div className='w-[90%] md:w-3/4 lg:w-1/2 xl:1/3 flex flex-col md:flex-row justify-between items-center'>
             <div className='flex items-center justify-center w-1/2 mb-5 md:mb-0'>
-              <div className='pierreId w-44 h-44 md:w-60 md:h-60 bg-cover rounded-full'>
+              <div className='pierreId w-44 h-44 md:w-60 md:h-60 bg-cover rounded-full border-red-200 border-8'>
               </div>
             </div>
             <div className='w-full md:w-1/2 flex items-center justify-center'>
-              <div className='font-avni text-[13pt] text-white text-center md:text-left'>
-                <h1 className='font-helv text-[26pt] font-bold mb-5 tracking-tight'>COUCOU TOUT LE MONDE</h1>
+              <div className='font-avni leading-snug text-[13pt] text-white text-center md:text-left'>
+                <h1 className='font-helv text-[26pt] font-bold mb-5 tracking-tight'>LOREM IPSUM</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem, perferendis optio amet, natus id quaerat aperiam unde delectus facere voluptate possimus quod nostrum obcaecati facilis molestiae est incidunt tempora.
                 s</p>
@@ -72,7 +72,7 @@ function App() {
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer speed={1} offset={0.5}>
+      <ParallaxLayer speed={1.2} offset={0.5}>
         <div className='mt-28 md:mt-24 flex items-center justify-center'>
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-9 w-[90%]'>
             {listOfProjects.map((project, key) => {

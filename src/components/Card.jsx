@@ -106,9 +106,9 @@ export const Card = (props) => {
   return (
     <div id={`cardDiv${props.id}`} className="card col-span-1 flex items-center justify-center hover:cursor-pointer transition-all duration-1000" style={{ height: `${height}px` }} ref={cardDivRef} onClick={() => clickCard(props.id, props.image)}>
       <div id={`picture${props.id}`} className="w-full h-full rounded-md md:rounded-lg bg-cover bg-center transition-all duration-1000" style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
-        <div id={`content${props.id}`} className='font-avni contentCard w-full h-full rounded-xl backdrop-blur-md bg-white/70 p-10 flex flex-col justify-between overflow-scroll transition-all duration-1000'>
+        <div id={`content${props.id}`} className='font-avni leading-snug contentCard w-full h-full rounded-md md:rounded-lg backdrop-blur-md bg-white/70 p-10 flex flex-col justify-between overflow-scroll transition-all duration-1000'>
           <div>
-            <h1 className='font-helv text-[26pt] font-bold mb-5 tracking-tight'>{props.title}</h1>
+            <h1 className='font-helv text-[26pt] leading-none font-bold mb-12 tracking-tight'>{props.title}</h1>
             <p className='mb-2'>{props.description}</p>
           </div>
           <div className='mt-5'>
