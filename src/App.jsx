@@ -8,6 +8,9 @@ import listOfProjects from './listOfProjects.jsx';
 import './intro.css';
 
 function App() {
+  let amountPage = 2.55;
+
+  //I just need a function to set the amount of page. the amount of page is on lg the amount of projects / 4 as a integer
   const footerRef = useRef();
   const parallax = useRef();
   const handleScroll = () => {
@@ -15,7 +18,7 @@ function App() {
       const theFooter = footerRef.current;
 
       console.log(parallax.current.current)
-      if(parallax.current.current > 300) {
+      if(parallax.current.current > 200) {
         theFooter.classList.remove('md:top-0');
         theFooter.classList.add('md:bottom-0');
       }
@@ -36,12 +39,18 @@ function App() {
 
   return (
     <>
-    <Parallax pages={3} ref={parallax} className='my-class-name'>
+    <Parallax pages={amountPage} 
+    ref={parallax} 
+    className='my-class-name'
+    style={{
+      backgroundColor: '#fecaca'
+    }}
+    >
       <ParallaxLayer 
-        speed={0.3}
-        factor={4}
+        speed={4}
+        factor={1.5}
         style={{
-          backgroundImage: 'url(/images/canada.jpg)',
+          backgroundImage: 'url(/images/curves/1.svg)',
           backgroundSize: 'cover'
         }}
       />
@@ -53,8 +62,8 @@ function App() {
               </div>
             </div>
             <div className='w-full md:w-1/2 flex items-center justify-center'>
-              <div className='font-avni text-white text-center md:text-left'>
-                <h1 className='font-helv font-bold mb-5 tracking-tight'>COUCOU TOUT LE MONDE</h1>
+              <div className='font-avni text-[13pt] text-white text-center md:text-left'>
+                <h1 className='font-helv text-[26pt] font-bold mb-5 tracking-tight'>COUCOU TOUT LE MONDE</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem, perferendis optio amet, natus id quaerat aperiam unde delectus facere voluptate possimus quod nostrum obcaecati facilis molestiae est incidunt tempora.
                 s</p>
@@ -63,7 +72,7 @@ function App() {
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer speed={1} factor={2} offset={0.5}>
+      <ParallaxLayer speed={1} offset={0.5}>
         <div className='mt-28 md:mt-24 flex items-center justify-center'>
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-9 w-[90%]'>
             {listOfProjects.map((project, key) => {
