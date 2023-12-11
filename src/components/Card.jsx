@@ -38,7 +38,7 @@ export const Card = (props) => {
     const allContentCards = document.querySelectorAll('.contentCard');
     // Loop through all cards and reset them
     allCards.forEach(card => {
-      card.classList.remove('col-span-2', 'hidden');
+      card.classList.remove('col-span-2', 'hidden', 'open');
       card.classList.add('col-span-1');
     });
     allContentCards.forEach(card => {
@@ -47,8 +47,7 @@ export const Card = (props) => {
   }
 
   const clickCard = (id, image) => {
-    //reset the cards
-    cardsReset();
+
 
     //get the clicked card
     const clickedDiv = document.getElementById(`cardDiv${id}`);
@@ -77,11 +76,11 @@ export const Card = (props) => {
     if (window.innerWidth > breakpoints.md) {
       //if the card is open, closes it
       if (clickedDiv.classList.contains('open')) {
-        clickedDiv.classList.remove('col-span-2', 'open');
-        clickedDiv.classList.add('col-span-1');
+        cardsReset();
       }
       //otherwise, open it. Starts by hidding the neighbor
       else {
+        cardsReset();
         if (divToHide != null) {
           divToHide.classList.add('hidden');
         }
@@ -93,9 +92,10 @@ export const Card = (props) => {
     //if the window is smaller than medium
     else {
       if(clickedDiv.classList.contains('open')) {
-        clickedDiv.classList.remove('open');
+        cardsReset();
       }
       else {
+        cardsReset();
         clickedDiv.classList.add('open');
         contentDiv.classList.remove('hidden');
       }
