@@ -18,7 +18,7 @@ export const Card = (props) => {
       //here add conditions according to the size of the window
       let divHeight = (5/4) * divWidth;
       if (window.innerWidth > breakpoints.md) {
-        divHeight = (3 / 2.1) * divWidth;
+        divHeight = (3 / 2) * divWidth;
       }
       setWidth(divWidth);
       setHeight(divHeight);

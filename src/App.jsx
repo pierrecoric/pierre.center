@@ -6,18 +6,59 @@ import { Card } from './components/Card.jsx';
 import { Footer } from './components/Footer.jsx';
 import listOfProjects from './listOfProjects.jsx';
 import './intro.css';
+import breakpoints from './breakpoints.jsx';
 
 function App() {
-  let amountPage = 2.55;
+  //the parallax component cannot be updated dynamically so its height counted in pages must be computed before start...
+  let amountPages = 3;
+  //function to calculate the amount of rows needed in this page
+  const amountRows = () => {
+    let divider = 1;
+    if (window.innerWidth > breakpoints.md) {
+      divider = 3
+    }
+    if (window.innerWidth > breakpoints.lg) {
+      divider = 4
+    }
+    return Math.ceil(listOfProjects.length / divider);
+  }
+  //compute the height of the div cards
+  const heightCard = () => {
+    let winWidth = window.innerWidth;
+    let cardWidth = 0;
+    let cardHeight = 0;
+    if(winWidth > breakpoints.lg) {
+      cardWidth = winWidth / 4
+      cardHeight = cardWidth * (3 / 2);
+    }
+    else if (winWidth > breakpoints.md) {
+      cardWidth = winWidth / 3
+      cardHeight = cardWidth * (3 / 2);
+    }
+    else {
+      cardWidth = winWidth / 1
+      cardHeight = cardWidth * (5 / 4);
+    }
+    return cardHeight;
+  }
+  //compute the amount of pages 
+  const computeAmountPages = () => {
+    let amount = 0;
+    amount = amountRows() * heightCard();
+    amount = amount / window.innerHeight;
+    amount = amount * 0.7;
+    return amount
+  }
+  amountPages = computeAmountPages();
+  console.log(computeAmountPages());
 
-  //I just need a function to set the amount of page. the amount of page is on lg the amount of projects / 4 as a integer
+  //div height / window.height
   const footerRef = useRef();
   const parallax = useRef();
+
   const handleScroll = () => {
     if (parallax.current) {
       const theFooter = footerRef.current;
-
-      console.log(parallax.current.current)
       if(parallax.current.current > 210) {
         theFooter.classList.remove('md:top-0');
         theFooter.classList.add('md:bottom-0');
@@ -30,16 +71,16 @@ function App() {
   }
   
   useEffect(() => {
-    const container = document.querySelector('.my-class-name')
-    container.addEventListener('scroll', handleScroll)
+    const container = document.querySelector('.my-class-name');
+    container.addEventListener('scroll', handleScroll);
     return () => {
-      container.removeEventListener('scroll', handleScroll)
+      container.removeEventListener('scroll', handleScroll);
     }
-  }, [footerRef])
+  }, [footerRef, parallax])
 
   return (
     <>
-    <Parallax pages={amountPage} 
+    <Parallax pages={amountPages} 
     ref={parallax} 
     className='my-class-name'
     style={{
@@ -74,7 +115,7 @@ function App() {
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer speed={1.2} offset={0.5}>
+      <ParallaxLayer speed={1} offset={0.5}>
         <div className='mt-28 md:mt-24 flex items-center justify-center'>
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-9 w-[90%]'>
             {listOfProjects.map((project, key) => {
