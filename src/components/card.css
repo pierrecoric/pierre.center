@@ -5,3 +5,52 @@
 .ghLogo:hover {
     background-image: url("/images/gh_logo_hover.svg")
 }
+
+
+.card {
+    overflow: hidden;
+}
+
+.pictureCard {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease; /* Add a smooth transition */
+}
+
+.card:hover .pictureCard {
+    transform: scale(1.2);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1);
+    z-index: -1;
+    transition: transform 0.3s ease; /* Add a smooth transition */
+}
+
+.card:hover::before {
+    transform: scale(1.2);
+}
+
+/* Specific selector for .open class to override the hover effect */
+.card.open .pictureCard {
+    transform: scale(1);
+    transition: transform 0s;
+}
+
+/* Specific selector for .open class to override the pseudo-element effect */
+.card.open::before {
+    transform: scale(1);
+    transition: transform 0s;
+}
+

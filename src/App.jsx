@@ -63,10 +63,12 @@ function App() {
             </div>
             <div className='w-full md:w-1/2 flex items-center justify-center'>
               <div className='font-avni leading-snug text-[13pt] text-white text-center md:text-left'>
-                <h1 className='font-helv text-[26pt] font-bold mb-5 tracking-tight'>LOREM IPSUM</h1>
+                <h1 className='font-helv text-[26pt] font-bold mb-5 tracking-tight'>I CODE [ THINGS ]</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rem, perferendis optio amet, natus id quaerat aperiam unde delectus facere voluptate possimus quod nostrum obcaecati facilis molestiae est incidunt tempora.
-                s</p>
+                  Hello, I am Pierre Coric.
+                  <br/>I am a visual artist and self-thaught developer. 
+                  <br/>I use computer programming as one of the tools of my creative process, and I help other to implement their ideas according to their means and goals.
+                </p>
               </div>
             </div>
           </div>
