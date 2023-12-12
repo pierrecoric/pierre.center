@@ -8,7 +8,7 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "Another long project title", 
+    {title: "As if It Was Making the Grass Happy to Grow", 
     description: "A reaaaaaly-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
     image: "as_if_it_was_making_the_grass_happy_to_grow",
@@ -16,7 +16,7 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
+    {title: "Les lois", 
     description: "A semi-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
     image: "les_lois",
@@ -24,7 +24,7 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
+    {title: "Ça aurait la longueur d'un trait bleu", 
     description: "A semi-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
     image: "ca_aurait_la_longueur_d_un_trait_bleu",
@@ -32,7 +32,7 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
+    {title: "Perlin Wave", 
     description: "A semi-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
     image: "perlin_wave",
@@ -40,7 +40,7 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
+    {title: "A Semi Secrete Conspiracy of Hidden Signs", 
     description: "A semi-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
     image: "a_semi_secrete_conspiracy",
@@ -48,7 +48,15 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
+    {title: "As We Continue", 
+    description: "A semi-long explanation of what this project is about etc etc",
+    link: "https://pierre-coric.top",
+    image: "as_we_continue",
+    github: "#"},
+    //--------------------------------------------------
+
+    //project
+    {title: "AA-ŻŻ", 
     description: "A semi-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
     image: "aa_zz_ujazdowski",
@@ -56,26 +64,18 @@ const listOfProjects = [
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
-    description: "A semi-long explanation of what this project is about etc etc",
-    link: "https://pierre-coric.top",
-    image: "as_we_wrap_it_around_those_woollen_wings",
-    github: "#"},
-    //--------------------------------------------------
-
-    //project
-    {title: "Another long project title", 
+    {title: "Tree Alphabet", 
     description: "A reaaaaaly-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
-    image: "as_if_it_was_making_the_grass_happy_to_grow",
+    image: "tree_alphabet",
     github: "#"},
     //--------------------------------------------------
 
     //project
-    {title: "A long project title", 
+    {title: "DNA Brick Pattern", 
     description: "A semi-long explanation of what this project is about etc etc",
     link: "https://pierre-coric.top",
-    image: "les_lois",
+    image: "dna_brick_pattern",
     github: "#"},
     //--------------------------------------------------
 

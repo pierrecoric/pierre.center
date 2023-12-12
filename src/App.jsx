@@ -4,9 +4,10 @@ import './App.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { Card } from './components/Card.jsx';
 import { Footer } from './components/Footer.jsx';
+import { Insert } from './Insert.jsx';
 import listOfProjects from './listOfProjects.jsx';
 import './intro.css';
-import breakpoints from './breakpoints.jsx';
+import breakpoints from './breakpoints.jsx'; 
 
 function App() {
   //the parallax component cannot be updated dynamically so its height counted in pages must be computed before start...
@@ -55,6 +56,8 @@ function App() {
   //div height / window.height
   const footerRef = useRef();
   const parallax = useRef();
+  const aboutRef = useRef();
+  const cvRef = useRef();
 
   const handleScroll = () => {
     if (parallax.current) {
@@ -134,6 +137,7 @@ function App() {
       </ParallaxLayer>
     </Parallax>
     <Footer footerRef={footerRef} />
+    
     </>
   )
 }
