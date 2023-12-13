@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import breakpoints from '../breakpoints';
+import breakpoints from './breakpoints';
 import './card.css';
 
 export const Card = (props) => {
