@@ -28,15 +28,19 @@ function App() {
     let cardWidth = 0;
     let cardHeight = 0;
     if(winWidth > breakpoints.lg) {
-      cardWidth = winWidth / 4
+      cardWidth = winWidth * 0.9
+      cardWidth = cardWidth - (36 * 3)
+      cardWidth = cardWidth / 4
       cardHeight = cardWidth * (3 / 2);
     }
     else if (winWidth > breakpoints.md) {
-      cardWidth = winWidth / 3
+      cardWidth = winWidth * 0.9
+      cardWidth = cardWidth - (36 * 2)
+      cardWidth = cardWidth / 3
       cardHeight = cardWidth * (3 / 2);
     }
     else {
-      cardWidth = winWidth / 1
+      cardWidth = winWidth * 0.9
       cardHeight = cardWidth * (5 / 4);
     }
     return cardHeight;
@@ -46,7 +50,7 @@ function App() {
     let amount = 0;
     amount = amountRows() * heightCard();
     amount = amount / window.innerHeight;
-    amount = amount * 0.7;
+    amount = amount * 0.9;
     return amount
   }
   //compute the actual amount of pages
@@ -115,7 +119,7 @@ function App() {
           </div>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer speed={1} offset={0.5}>
+      <ParallaxLayer speed={0.7} offset={0.5}>
         <div className='mt-28 md:mt-24 flex items-center justify-center'>
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-9 w-[90%]'>
             {listOfProjects.map((project, key) => {

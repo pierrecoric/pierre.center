@@ -103,7 +103,7 @@ export const Footer = ({ footerRef }) => {
                     <a className="hover:text-orange-500 mr-6 hover:cursor-pointer" onClick={() => toggleInsertAbout()}>about me</a>
                     <a className="hover:text-orange-500 mr-6 hover:cursor-pointer" onClick={() => toggleInsertContact()}>contact</a>
                     <a className="hover:text-orange-500 mr-6 hover:cursor-pointer" onClick={() => toggleInsertResume()}>resume</a>
-                    <a className='inline h-8 w-8 bg-cover ghLogo' href="https://gi0thub.com/pierrecoric" target="_blank"></a>
+                    <a className='inline h-8 w-8 bg-cover ghLogo' href="https://github.com/pierrecoric" target="_blank"></a>
                 </div>
             </div>
         </div>    
