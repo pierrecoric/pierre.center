@@ -112,7 +112,7 @@ function App() {
                 <p>
                   Hello, I am Pierre Coric.
                   <br/>I am a visual artist and self-thaught developer. 
-                  <br/>I use computer programming as one of the tools of my creative process, and I help other to implement their ideas according to their means and goals.
+                  <br/>I use computer programming as one of the tools of my creative process and I am happy to share my skills with other to implement their ideas according to their means and goals.
                 </p>
               </div>
             </div>
@@ -128,7 +128,9 @@ function App() {
               title={project.title} 
               description={project.description} 
               image={project.image}
+              linkText={project.linkText}
               link={project.link}
+              gh={project.gh}
               github={project.github}
               />
               })

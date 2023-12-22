@@ -1,5 +1,9 @@
 import './card.css';
 import React, {useState, useEffect, useRef} from 'react';
+import { ContactContent } from './ContactContent';
+import { InsertContent } from './InsertContent';
+import { AboutContent } from './AboutContent';
+import { ResumeContent } from './ResumeContent'
 
 
 export const Footer = ({ footerRef }) => {
@@ -7,9 +11,10 @@ export const Footer = ({ footerRef }) => {
     const [isVisibleContact, setIsVisibleContact] = useState(false);
     const [isVisibleResume, setIsVisibleResume] = useState(false);
 
+    const insertClass = 'rounded-none md:rounded-lg w-full h-[90%] md:w-[60vw] md:ml-[20vw] md:h-[70vh] md:mt-[15vh] bg-white flex items-center justify-center';
     const toggleInsertAbout = () => {
         if (isVisibleAbout) {
-            setIsVisibleAbout(false);
+            handleCross();
         }
         else {
             setIsVisibleAbout(true);
@@ -17,7 +22,7 @@ export const Footer = ({ footerRef }) => {
     }
     const toggleInsertContact = () => {
         if (isVisibleContact) {
-            setIsVisibleContact(false);
+            handleCross();
         }
         else {
             setIsVisibleContact(true);
@@ -25,7 +30,7 @@ export const Footer = ({ footerRef }) => {
     }
     const toggleInsertResume = () => {
         if (isVisibleResume) {
-            setIsVisibleResume(false);
+            handleCross();
         }
         else {
             setIsVisibleResume(true);
@@ -45,7 +50,7 @@ export const Footer = ({ footerRef }) => {
 
     return(
         <>
-        
+        {/*About*/}
         <div className={`${isVisibleAbout ? 'fixed' : 'hidden'} rounded-none md:rounded-lg w-full h-[90%] md:w-[60vw] md:ml-[20vw] md:h-[70vh] md:mt-[15vh] bg-white flex items-center justify-center`}>
             <div className="w-[90%] h-[90%] flex-col">
                 <div className="w-full flex justify-end mb-12">
@@ -54,13 +59,11 @@ export const Footer = ({ footerRef }) => {
                     </button>
                 </div>
                 <div className="w-full h-full flex flex-col items-center ">
-                    <div className="w-full h-auto max-h-[80%] overflow-scroll">
-                        About
-                    </div>
+                    <InsertContent content = {<AboutContent/>} />
                 </div>
             </div>
         </div>
-
+        {/*Contact*/}
         <div className={`${isVisibleContact ? 'fixed' : 'hidden'} rounded-none md:rounded-lg w-full h-[90%] md:w-[60vw] md:ml-[20vw] md:h-[70vh] md:mt-[15vh] bg-white flex items-center justify-center`}>
             <div className="w-[90%] h-[90%] flex-col">
                 <div className="w-full flex justify-end mb-12">
@@ -69,13 +72,11 @@ export const Footer = ({ footerRef }) => {
                     </button>
                 </div>
                 <div className="w-full h-full flex flex-col items-center ">
-                    <div className="w-full h-auto max-h-[80%] overflow-scroll">
-                        Contact
-                    </div>
+                    <InsertContent content = {<ContactContent/>} />
                 </div>
             </div>
         </div>
-
+        {/*Resume*/}
         <div className={`${isVisibleResume ? 'fixed' : 'hidden'} rounded-none md:rounded-lg w-full h-[90%] md:w-[60vw] md:ml-[20vw] md:h-[70vh] md:mt-[15vh] bg-white flex items-center justify-center`}>
             <div className="w-[90%] h-[90%] flex-col">
                 <div className="w-full flex justify-end mb-12">
@@ -84,9 +85,7 @@ export const Footer = ({ footerRef }) => {
                     </button>
                 </div>
                 <div className="w-full h-full flex flex-col items-center ">
-                    <div className="w-full h-auto max-h-[80%] overflow-scroll">
-                        Resume
-                    </div>
+                    <InsertContent content = {<ResumeContent/>} />
                 </div>
             </div>
         </div>

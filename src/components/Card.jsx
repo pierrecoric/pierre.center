@@ -104,16 +104,16 @@ export const Card = (props) => {
   }
 
   return (
-    <div id={`cardDiv${props.id}`} className="card col-span-1 flex items-center justify-center hover:cursor-pointer " style={{ height: `${height}px` }} ref={cardDivRef} onClick={() => clickCard(props.id, props.image)}>
+    <div id={`cardDiv${props.id}`} className="card col-span-1 flex items-center justify-center hover:cursor-pointer rounded-md md:rounded-lg" style={{ height: `${height}px` }} ref={cardDivRef} onClick={() => clickCard(props.id, props.image)}>
       <div id={`picture${props.id}`} className="pictureCard w-full h-full rounded-md md:rounded-lg bg-cover bg-center " style={{ backgroundImage: `url('/images/${props.image}.jpg')` }}>
         <div id={`content${props.id}`} className='contentCard font-avni leading-snug w-full h-full rounded-md md:rounded-lg backdrop-blur-md bg-white/70 p-10 flex flex-col justify-between overflow-scroll'>
-          <div>
+          <div style={{ whiteSpace: 'pre-line' }}>
             <h1 className='font-helv text-[26pt] leading-none font-bold mb-12 tracking-tight'>{props.title}</h1>
             <p className='mb-2'>{props.description}</p>
           </div>
           <div className='mt-5'>
-            <a className='underline text-orange-500 hover:text-black' href={`${props.link}`} target="_blank">{props.link}</a>
-            <a className='block mt-5 h-8 w-8 bg-cover ghLogo' href={`${props.github}`} target="_blank"></a>
+            <a className='underline text-orange-500 hover:text-black' href={`${props.link}`} target="_blank">{props.linkText}</a>
+            <a className= {`${props.gh ? 'block' : 'hidden'} mt-5 h-8 w-8 bg-cover ghLogo`} href={`${props.github}`} target="_blank"></a>
           </div>
         </div>
       </div>
