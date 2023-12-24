@@ -60,7 +60,7 @@ const listOfProjects = [
 
     //project
     {title: "Relay Sequencer (Parts of Our Brain)", 
-    description: "Processing script developed during a workshop hosted by the Royal Academy of Fine Arts in Antwerp where I have been invited by Anna Godzina.\n This processing script creates a visual sequencer that controls electric relays through an Arduino board. We became able to turn on and off in a synchronous way on different channels a series of various electrical devices and to use this installation as a beat machine for a sound performance.",
+    description: "Processing script developed during a workshop hosted by the Royal Academy of Fine Arts in Antwerp, where I have been invited by Anna Godzina. \nThis processing script creates a visual sequencer that controls electric relays through an Arduino board. We became able to turn on and off in a synchronous way on different channels a series of various electrical devices and to use this installation as a beat machine for a sound performance.",
     link: "",
     image: "parts_of_our_brain",
     gh: true,
@@ -69,7 +69,7 @@ const listOfProjects = [
 
     //project
     {title: "Website for the Governance", 
-    description: "A website for a film project that I work on in collaboration with Alice Brunnquell. \n The website includes a chat and a back-office where my collaborator and myself can directly update the website. The back office also contains a list of pages in constructions that we use to develope and share our notes concerning the story of our movie.",
+    description: "A website for a film project that I work on in collaboration with Alice Brunnquell. \n The website includes a chat and a back office where my collaborator and I can directly update the website. The back office also contains a list of pages in construction that we use to develop and share our notes concerning the story of our movie.",
     linkText:"www.governance.direct",
     link: "https://governance.direct/",
     image: "governance",
@@ -129,7 +129,7 @@ const listOfProjects = [
 
     //project
     {title: "Morse code translator", 
-    description: `A processing script that turns a morse code sentence into its visual representation. Each horizontal line is a word, the height of the surface is divided in as many rows as there are words in the given text. \n The script also outputs a text file that gives the measures of each piece of fabric needed to turn the result into a quilt`,
+    description: `A processing script that turns a morse code sentence into its visual representation. Each horizontal line is a word, the height of the surface is divided into as many rows as there are words in the given text. \n The script also outputs a text file that gives the measures of each piece of fabric needed to turn the result into a quilt`,
     linkText: "A Semi Secrete Conspiracy of Hidden Signs",
     link: "https://pierre-coric.top/pages/a_semi_secrete_conspiracy.html",
     image: "a_semi_secrete_conspiracy",
@@ -139,7 +139,7 @@ const listOfProjects = [
 
     //project
     {title: "Hacked barricade lights instrument and visual translation", 
-    description: "This installation was made out of a series of hacked barricade lights. Through an analog modification, I became able to handle their blinking speed. Each blink was triggering sound on a modular synthesizer and this musical information was recorded live by a computer. The algorithm was outputing a text file with instructions for a site specific wall painting representing the musical information of a given piece.",
+    description: "This installation was made out of a series of hacked barricade lights. Through an analog modification, I became able to handle their blinking speed. Each blink was triggering sound on a modular synthesizer and this musical information was recorded live by a computer. The algorithm was outputting a text file with instructions for a site specific wall painting representing the musical information of a given piece.",
     linkText: "Obects VS Things",
     link: "https://pierre-coric.top/pages/objects_vs_things.html",
     image: "objects_vs_things",
