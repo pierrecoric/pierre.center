@@ -43,9 +43,9 @@ function App() {
               <div className='font-avni leading-snug text-[13pt] text-white text-center md:text-left'>
                 <h1 className='font-helv text-[26pt] font-bold mt-5 mb-5 md:mb-12 md:mt-12 tracking-tight'>I CODE [ THINGS ]</h1>
                 <p>
-                  Hello, I am Pierre Coric.
-                  <br/>I am a visual artist and self-thaught developer. 
-                  <br/>I use computer programming as one of the tools of my creative process and I am happy to share my skills with other to implement their ideas according to their means and goals.
+                  Hi, I'm Pierre Coric.
+                  <br/>I am a visual artist and self-taught developer.
+                  <br/>Computer programming is a central facet of my creative process, allowing me to bring unique visions to life, and I am glad to collaborate with others, offering my skills to help turn their ideas into reality according to their resources and objectives.
                 </p>
               </div>
             </div>
