@@ -1,6 +1,6 @@
 const listOfProjects = [
     //project
-    {title: "Data vizualisation fo the rain precipitation in the city of Marrakesh", 
+    {title: "Data visualization fo the rain precipitation in the city of Marrakesh", 
     description: "During an art residency in Marrakesh, I decided to work with public meteorological data, more specifically, the rain precipitation data. I played around with this material until I found a compelling form to engage a conversation around this topic. I processed the data with Python and rendered some potential forms in Blender to finally settle on a sculptural solution that I could produce with the help and advice of a wood craftsman. I produced picture files and textual dimensions for each of the separated pieces. He produced them in his woodshop, and I assembled them for the final exhibition at Le 18. \n the piece is titled As If It Was Making the Grass Happy to Grow",
     linkText: "Article on the website of Le 18",
     link: "https://www.le18marrakech.com/contenus/as-if-it-was-making-the-grass-happy-to-grow",

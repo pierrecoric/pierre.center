@@ -52,7 +52,7 @@ function App() {
           </div>
         </div>
         <div className='mt-12 md:mt-28 flex items-center justify-center'>
-          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 lg:gap-7 w-[90%] mb-[50px] lg:mb-[100px]'>
+          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 lg:gap-7 w-[90%] mb-[100px] lg:mb-[150px]'>
             {listOfProjects.map((project, key) => {
               return <Card 
               id={key}
