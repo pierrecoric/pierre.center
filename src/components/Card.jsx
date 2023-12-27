@@ -16,7 +16,7 @@ export const Card = (props) => {
       cardsReset();
       const divWidth = cardDivRef.current.offsetWidth;
       //here add conditions according to the size of the window
-      let divHeight = (5/4) * divWidth;
+      let divHeight = (5/6) * divWidth;
       if (window.innerWidth > breakpoints.md) {
         divHeight = (3 / 2) * divWidth;
       }
@@ -48,7 +48,6 @@ export const Card = (props) => {
   }
 
   const clickCard = (id, image) => {
-
 
     //get the clicked card
     const clickedDiv = document.getElementById(`cardDiv${id}`);

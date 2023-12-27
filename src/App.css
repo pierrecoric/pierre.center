@@ -1,0 +1,8 @@
+#background-main {
+    background-image: url('/images/curves/1.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    @media (max-width: 767px) {
+        background-size: 450%; /* Adjust as needed for the desired size on mobile */
+    }
+}
